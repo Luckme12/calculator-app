@@ -1,0 +1,89 @@
+:root {
+  --bg: #111;
+  --panel: #1e1e1e;
+  --btn: #2c2c2c;
+  --btn-op: #ff9500;
+  --btn-ac: #a5a5a5;
+  --text: #fff;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--bg);
+  font-family: "Segoe UI", sans-serif;
+}
+
+.calculator {
+  width: 90vw;
+  max-width: 400px;
+  padding: 20px;
+  border-radius: 25px;
+  background: var(--panel);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.7);
+  box-sizing: border-box;
+}
+
+#display {
+  width: 100%;
+  height: 80px;
+  border: none;
+  border-radius: 15px;
+  background: #000;
+  color: var(--text);
+  font-size: 2.5rem;
+  text-align: right;
+  padding: 15px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+button {
+  height: 70px;
+  border-radius: 50%;
+  border: none;
+  font-size: 1.5rem;
+  background: var(--btn);
+  color: var(--text);
+  cursor: pointer;
+  transition: 0.1s;
+}
+
+button:active {
+  transform: scale(0.92);
+}
+
+.op {
+  background: var(--btn-op);
+}
+
+.ac {
+  background: var(--btn-ac);
+  color: #000;
+}
+
+.zero {
+  grid-column: span 2;
+  border-radius: 40px;
+}
+
+@media (max-width: 450px) {
+  #display {
+    font-size: 2rem;
+    height: 65px;
+  }
+
+  button {
+    height: 60px;
+    font-size: 1.3rem;
+  }
+}
